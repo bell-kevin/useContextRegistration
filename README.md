@@ -10,13 +10,9 @@ In this project, you will create a very simple registration verification. If a u
 
 Do some housekeeping first. Remove the images on the 3 color pages. In the navigation setup, change the names of the screens to "Registration" for the home screen, and "Name", "Phone", and "Email" for the other 3 pages. In the Home screen, be sure to change the navigation to use those names, rather than the color names from the previous project. The titles on each page also need to change to "Registration", "Name", "Phone", and "Email". On each color page, display a header that says "Verify your (name/phone/email)", and display text below that shows that data from the context.
 
-![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-register.PNG)
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-register.PNG) ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-name.PNG)
 
-![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-name.PNG)
-
-![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-phone.PNG)
-
-![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-email.PNG)
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-phone.PNG) ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-email.PNG)
 
 ### Set up the Context
 
