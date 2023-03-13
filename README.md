@@ -1,6 +1,6 @@
 # Registration with useContext
 
-Access to data in a React Native project can be handled by passing props, but that is only one mechanism. Another is to use the useContext, a React application, another is to use the Redux library, and more. You will learn about useContext and Redux in the Udemy videos, but you will be using useContext in the rest of this course. After watching a brief introduction about useContext, which was implemented in a React project, practice the concepts in a React Native project here.
+Access to data in a React Native project can be handled by passing props, but that is only one mechanism. Another is to use the useContext, a React application, another is to use the Redux library, and more. You will learn about useContext and Redux in the Udemy videos, but you will be using useContext in the rest of this course. After watching a brief introduction about useContext (https://piped.video/watch?v=Hu5lB21Wf5k), which was implemented in a React project, practice the concepts in a React Native project here.
 
 You previously created a project to practice stack navigation, which had a home page and 3 color pages. You need navigation to move between screens to practice using context, so you will use that color project as the starting point here. MAKE A COPY of that previous project.
 
