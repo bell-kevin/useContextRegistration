@@ -18,13 +18,13 @@ Notice that the header on the screen (in the gray section at the top) specifies 
 
 ### Set up the Context
 
-Create a folder in the project named "context", and a file in that folder named "userContext.js". In the intro video, the context was defined in the App.js file -- here, it will be in its own file. In that file, import createContext from React. This file will contain the definition of the structure of the data for this context. Use createContext to declare an object with the fields "firstName", "lastName", "phone", and "email". Declare them with null strings. Create this context in the constant variable UserContext, and export it, similar to the intro video.
+Create a folder in the project named "context", and a file in that folder named "userContext.js". In the intro video, the context was defined in the App.js file -- here, it will be in its own file. In that file, import createContext from React. This file will contain the definition of the structure of the data for this context. Use createContext to declare an object with the fields "firstName", "lastName", "phone", and "email". Declare them with null strings. Create this context in the constant variable UserContext, and export it, similar to the intro video. That code in the userContext.js file is:
 
 ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-declare.PNG)
 
 ### App.js File
 
-In that video, the content of the context is a single variable, "name", which was set with App.defaultProps. In your project, in App.js, declare a constant variable named "initialState", which assigns values to the fields in the object of the context. Use your own first and last names; you can use your own phone number and email, or make it up, for those fields.
+In that video, the content of the context is a single variable, "name", which was set with App.defaultProps. In your project, in App.js, declare a constant variable named "initialState", which assigns values to the fields in the object of the context. Use your own first and last names; you can use your own phone number and email, or make it up, for those fields. In the example shown here, that code in the App.js file is:
 
 ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-setup.PNG)
 
