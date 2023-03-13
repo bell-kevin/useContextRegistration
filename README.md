@@ -6,21 +6,21 @@ You previously created a project to practice stack navigation, which had a home 
 
 In this project, you will create a very simple registration verification. If a user had entered data about their name, email, and phone, this app would ask them to verify that data. It doesn't have any mechanism for actually responding, to verify or change, that may happen later. It provides a basic experience with context.
 
-Preparation
+### Preparation
 
 Do some housekeeping first. Remove the images on the 3 color pages. In the navigation setup, change the names of the screens to "Registration" for the home screen, and "Name", "Phone", and "Email" for the other 3 pages. In the Home screen, be sure to change the navigation to use those names, rather than the color names from the previous project. The titles on each page also need to change to "Registration", "Name", "Phone", and "Email". On each color page, display a header that says "Verify your (name/phone/email)", and display text below that shows that data from the context.
 
-Set up the Context
+### Set up the Context
 
 Create a folder in the project named "context", and a file in that folder named "userContext.js". In the intro video, the context was defined in the App.js file -- here, it will be in its own file. In that file, import createContext from React. This file will contain the definition of the structure of the data for this context. Use createContext to declare an object with the fields "firstName", "lastName", "phone", and "email". Declare them with null strings. Create this context in the constant variable UserContext, and export it, similar to the intro video.
 
-App.js File
+### App.js File
 
 In that video, the content of the context is a single variable, "name", which was set with App.defaultProps. In your project, in App.js, declare a constant variable named "initialState", which assigns values to the fields in the object of the context. Use your own first and last names; you can use your own phone number and email, or make it up, for those fields.
 
 To make the context "globally" available, wrap the stack navigator with the context provider component. The file has a NavigationContainer, then a Stack Navigator. Put the Provider between those, so that everything in the stack has access to the context. The Provider requires a "value" parameter -- use the initialState variable for that value. See the code for the App.js file in the intro video for guidance.
 
-Three files
+### Three files
 
  In each of the color files, import useContext from React, and import UserContext from its file, userContext.js. In the function for the file, declare a context variable with useContext. For example, if working in the file about names, use the firstName and lastName values in the context. The variable that uses the context might be named "userNameCtx" -- that "ctx" helps to identify this as the context, not the actual names. It would look like this to declare the variable that accesses the context:
 
