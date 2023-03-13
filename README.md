@@ -14,6 +14,8 @@ Do some housekeeping first. Remove the images on the 3 color pages. In the navig
 
 ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-phone.PNG) ![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-email.PNG)
 
+Notice that the header on the screen (in the gray section at the top) specifies the data for verification (name, phone, email).
+
 ### Set up the Context
 
 Create a folder in the project named "context", and a file in that folder named "userContext.js". In the intro video, the context was defined in the App.js file -- here, it will be in its own file. In that file, import createContext from React. This file will contain the definition of the structure of the data for this context. Use createContext to declare an object with the fields "firstName", "lastName", "phone", and "email". Declare them with null strings. Create this context in the constant variable UserContext, and export it, similar to the intro video.
