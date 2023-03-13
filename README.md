@@ -10,13 +10,25 @@ In this project, you will create a very simple registration verification. If a u
 
 Do some housekeeping first. Remove the images on the 3 color pages. In the navigation setup, change the names of the screens to "Registration" for the home screen, and "Name", "Phone", and "Email" for the other 3 pages. In the Home screen, be sure to change the navigation to use those names, rather than the color names from the previous project. The titles on each page also need to change to "Registration", "Name", "Phone", and "Email". On each color page, display a header that says "Verify your (name/phone/email)", and display text below that shows that data from the context.
 
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-register.PNG)
+
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-name.PNG)
+
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-phone.PNG)
+
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-email.PNG)
+
 ### Set up the Context
 
 Create a folder in the project named "context", and a file in that folder named "userContext.js". In the intro video, the context was defined in the App.js file -- here, it will be in its own file. In that file, import createContext from React. This file will contain the definition of the structure of the data for this context. Use createContext to declare an object with the fields "firstName", "lastName", "phone", and "email". Declare them with null strings. Create this context in the constant variable UserContext, and export it, similar to the intro video.
 
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-declare.PNG)
+
 ### App.js File
 
 In that video, the content of the context is a single variable, "name", which was set with App.defaultProps. In your project, in App.js, declare a constant variable named "initialState", which assigns values to the fields in the object of the context. Use your own first and last names; you can use your own phone number and email, or make it up, for those fields.
+
+![p](https://github.com/bell-kevin/useContextRegistration/blob/main/readMeExamplePictures/context-setup.PNG)
 
 To make the context "globally" available, wrap the stack navigator with the context provider component. The file has a NavigationContainer, then a Stack Navigator. Put the Provider between those, so that everything in the stack has access to the context. The Provider requires a "value" parameter -- use the initialState variable for that value. See the code for the App.js file in the intro video for guidance.
 
