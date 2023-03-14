@@ -8,7 +8,7 @@ const PhoneScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Verify your phone</Text>
-      <Text>{userNameCtx.phone}</Text>
+      <Text style={styles.text}>{userNameCtx.phone}</Text>
     </View>
   );
 };
@@ -18,11 +18,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'lightgreen',
   },
   header: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'darkgreen',
+  },
+  text: {
+    fontSize: 18,
+    color: 'darkgreen',
   },
 });
 
