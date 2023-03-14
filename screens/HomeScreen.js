@@ -7,25 +7,40 @@ export default function HomeScreen() {
   const navigation = useNavigation();
   const { firstName, lastName } = React.useContext(UserContext);
 
-  const handlePress = () => {
-    navigation.navigate('Name');
+  const handlePress = (screenName) => {
+    navigation.navigate(screenName);
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.headingContainer}>
-        <Text style={styles.headingText}>Registration</Text>
-      </View>
       <View style={styles.contentContainer}>
         <Text style={styles.contentText}>
-          Please verify your information:
+          Registration
         </Text>
-        <Text style={styles.contentText}>
-          Name: {firstName} {lastName}
-        </Text>
-        <TouchableOpacity style={styles.button} onPress={handlePress}>
-          <Text style={styles.buttonText}>Next</Text>
-        </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity
+            style={styles.buttonName}
+            onPress={() => handlePress('Name')}
+          >
+            <Text style={styles.buttonText}>Name</Text>
+          </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            style={styles.buttonPhone}
+            onPress={() => handlePress('Phone')}
+          >
+            <Text style={styles.buttonText}>Phone</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <TouchableOpacity
+            style={styles.buttonEmail}
+            onPress={() => handlePress('Email')}
+          >
+            <Text style={styles.buttonText}>Email</Text>
+          </TouchableOpacity>
+        </View>
+        </View>
       </View>
     </View>
   );
@@ -34,20 +49,10 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'lightgrey',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  headingContainer: {
-    height: 60,
-    width: '100%',
-    backgroundColor: '#bbb',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  headingText: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    backgroundColor: 'black',
   },
   contentContainer: {
     flex: 1,
@@ -56,18 +61,38 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   contentText: {
-    fontSize: 20,
+    fontSize: 25,
     marginVertical: 10,
-  },
-  button: {
-    backgroundColor: '#bbb',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 10,
+    color: 'white',
   },
   buttonText: {
-    color: '#fff',
+    color: 'white',
     fontWeight: 'bold',
     fontSize: 16,
+    textAlign: 'center',
+  },
+  buttonContainer: {
+    justifyContent: 'space-between',
+    width: '100%',
+    marginVertical: 10,
+  },
+  buttonName: {
+    backgroundColor: 'cornflowerblue',
+    paddingVertical: 10,
+    paddingHorizontal: 70,
+    width: '100%',
+  },
+  buttonPhone: {
+    backgroundColor: 'forestgreen',
+    paddingVertical: 10,
+    paddingHorizontal: 60,
+    width: '100%',
+    marginVertical: 20,
+  },
+  buttonEmail: {
+    backgroundColor: 'red',
+    paddingVertical: 10,
+    paddingHorizontal: 60,
+    width: '100%',
   },
 });
