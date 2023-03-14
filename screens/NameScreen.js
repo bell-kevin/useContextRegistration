@@ -6,23 +6,29 @@ const NameScreen = () => {
   const userNameCtx = useContext(UserContext);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Verify your name</Text>
-      <Text>{userNameCtx.firstName} {userNameCtx.lastName}</Text>
+    <View style={styles.contentContainer}>
+      <Text style={styles.textContent}>Verify your name</Text>
+      <Text style={styles.text}>{userNameCtx.firstName} {userNameCtx.lastName}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  contentContainer: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'lightblue',
   },
-  header: {
+  textContent: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'blue',
+  },
+  text: {
+    fontSize: 18,
+    color: 'blue',
   },
 });
 
