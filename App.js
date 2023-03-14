@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import UserContext from './context/userContext'; // Add this line
+import UserContext from './context/userContext';
 
 import HomeScreen from './screens/HomeScreen';
 import NameScreen from './screens/NameScreen';
@@ -12,17 +12,22 @@ const Stack = createStackNavigator();
 
 export default App = () => {
   const initialState = {
-    firstName: 'John',
-    lastName: 'Doe',
-    phone: '123-456-7890',
-    email: 'johndoe@example.com',
+    firstName: 'Kevin',
+    lastName: 'Bell',
+    phone: '801-456-7890',
+    email: 'kevinBell@example.com',
   };
 
   return (
     <NavigationContainer>
       <UserContext.Provider value={initialState}>
-        <Stack.Navigator initialRouteName="Registration">
-          <Stack.Screen name="Registration" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Navigator initialRouteName="Registration" screenOptions={{ headerTitleAlign: 'left',
+          headerStyle: {backgroundColor: 'lightgrey',
+        },
+        headerTintColor: 'purple',
+        headerTitleStyle: {fontWeight: 'bold', fontSize: 24},
+        }}>
+          <Stack.Screen name="Registration" component={HomeScreen} options={{ headerShown: true }} />
           <Stack.Screen name="Name" component={NameScreen} />
           <Stack.Screen name="Phone" component={PhoneScreen} />
           <Stack.Screen name="Email" component={EmailScreen} />
