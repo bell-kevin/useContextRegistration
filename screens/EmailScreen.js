@@ -8,7 +8,7 @@ const EmailScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Verify your email</Text>
-      <Text>{userNameCtx.email}</Text>
+      <Text style={styles.text}>{userNameCtx.email}</Text>
     </View>
   );
 };
@@ -18,11 +18,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'mistyrose',
   },
   header: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
+    color: 'darkred',
+  },
+  text: {
+    fontSize: 18,
+    color: 'darkred',
   },
 });
 
